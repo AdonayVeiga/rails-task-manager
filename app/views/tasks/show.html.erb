@@ -1,0 +1,15 @@
+<h1><%= @task.title %></h1>
+<div class="card"><%= @task.details %></div>
+<p>
+  <input type="checkbox" name="" id="" <%= @task.completed? ? 'checked' : '' %> disabled>
+  <%= @task.completed? ? 'This task is completed' : 'This task is not completed yet' %>
+
+</p>
+<%= button_to "Edit this task",
+  edit_task_path(@task),
+  method: :get %>
+<!-- <form action="/tasks/<%= @task.id %>/edit" method="get">
+  <input type="submit" value="Edit this task">
+</form> -->
+
+<%= link_to 'Back to list', tasks_path %>
