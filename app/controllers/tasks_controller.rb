@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :task_find, only: %i[edit update show destory]
+  before_action :task_find, only: %i[edit update show destroy]
   def index
     @tasks = Task.all
   end
